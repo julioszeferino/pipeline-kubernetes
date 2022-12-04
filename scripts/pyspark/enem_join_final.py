@@ -55,8 +55,8 @@ if __name__ == '__main__':
     print("Iniciando a junção dos dados..")
     uf_final = (
         uf_idade
-        .join(uf_sexo, on="SG_UF_RESIDENCIA", how="inner")
-        .join(uf_notas, on="SG_UF_RESIDENCIA", how="inner")
+        .join(uf_sexo, on="SG_UF_PROVA", how="inner")
+        .join(uf_notas, on="SG_UF_PROVA", how="inner")
     )
 
     print(10*"#")

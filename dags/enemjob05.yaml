@@ -17,9 +17,9 @@ spec:
   type: Python
   pythonVersion: "3"
   mode: cluster
-  image: "docker.io/julioszeferino/spark-operator:v1"
+  image: "docker.io/neylsoncrepalde/spark-operator:v3.0.0-aws"
   imagePullPolicy: Always
-  mainApplicationFile: s3a://julioszeferino-dl-codes/pyspark/enem_agrega_notas.py
+  mainApplicationFile: "s3://julioszeferino-dl-codes/pyspark/enem_agrega_notas.py"
   sparkVersion: "3.0.0"
   restartPolicy:
     type: Never

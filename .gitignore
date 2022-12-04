@@ -3,3 +3,4 @@ quick-notes.md
 .terraform.lock.hcl
 secrets.txt
 TODO.txt
+data/*

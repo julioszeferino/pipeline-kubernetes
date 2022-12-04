@@ -40,8 +40,8 @@ if __name__ == '__main__':
     print("Iniciando a agregação dos dados..")
     uf_idade = (
         df
-        .groupBy("SG_UF_RESIDENCIA")
-        .agg(mean(df.NU_IDADE).alias("med_nu_idade"))
+        .groupBy("SG_UF_PROVA")
+        .agg(mean(df.TP_FAIXA_ETARIA).alias("med_nu_idade"))
     )
 
     print(10*"#")

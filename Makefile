@@ -33,4 +33,4 @@ destroyall:
 	helm uninstall airflow -n airflow \
 	&& kubectl delete svc airflow-webserver -n airflow \
 	&& kubectl delete pvc data-airflow-postgresql-0 -n airflow
-	&& kubectl delete namespace airflow \
+	&& kubectl delete namespace airflow 

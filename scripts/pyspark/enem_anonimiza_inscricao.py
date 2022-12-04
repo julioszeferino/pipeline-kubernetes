@@ -44,7 +44,7 @@ if __name__ == '__main__':
         .withColumn("inscricao_string", df.NU_INSCRICAO.cast("string"))
         .withColumn("inscricao_menor", substring(col("inscricao_string"), 5, 4))
         .withColumn("inscricao_oculta", concat(lit("*****"), col("inscricao_menor"), lit("***")))
-        .select("NU_INSCRICAO", "inscricao_oculta", "NU_NOTA_MT", "SG_UF_RESIDENCIA")
+        .select("NU_INSCRICAO", "inscricao_oculta", "NU_NOTA_MT", "SG_UF_PROVA")
     )
 
     print(10*"#")

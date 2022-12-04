@@ -41,18 +41,18 @@ if __name__ == '__main__':
     uf_m = (
         df
         .filter(col("TP_SEXO") == "M")
-        .groupBy("SG_UF_RESIDENCIA")
+        .groupBy("SG_UF_PROVA")
         .agg(count(col("TP_SEXO")).alias("count_m"))
     )
 
     uf_f = (
         df
         .filter(col("TP_SEXO") == "F")
-        .groupBy("SG_UF_RESIDENCIA")
+        .groupBy("SG_UF_PROVA")
         .agg(count(col("TP_SEXO")).alias("count_f"))
     )
 
-    uf_sexo = uf_m.join(uf_f, on="SG_UF_RESIDENCIA", how="inner")
+    uf_sexo = uf_m.join(uf_f, on="SG_UF_PROVA", how="inner")
 
     print(10*"#")
     print("Iniciando a escrita dos dados na zona de processamento")
