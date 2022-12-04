@@ -1,0 +1,5 @@
+quick-notes.md
+.terraform/
+.terraform.lock.hcl
+secrets.txt
+TODO.txt
